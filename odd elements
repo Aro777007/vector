@@ -1,0 +1,44 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+template <typename T>
+class mlass
+{
+public:
+    vector<int> arrayy;
+
+    mlass()
+    {
+        for (int i = 0; i < 8; ++i)
+        {
+            arrayy.push_back(rand() % 10);
+            cout << arrayy[i] << " ";
+        }
+
+        cout << endl;
+
+        vector<int> newarrayy;
+        for (int i = 0; i < arrayy.size(); ++i)
+        {
+            if (arrayy[i] % 2 == 0 && arrayy[i] != 0)
+            {
+                newarrayy.push_back(arrayy[i]);
+                cout << arrayy[i] << " ";
+            }
+        }
+
+        arrayy = newarrayy;
+
+        cout << endl;
+
+    }
+
+
+};
+
+int main()
+{
+    mlass<int> obj;
+    return 0;
+}
